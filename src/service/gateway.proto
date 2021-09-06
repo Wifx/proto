@@ -40,7 +40,6 @@ message gateway_resp_v1 {
   uint64 height = 1;
   bytes signature = 2;
   oneof msg {
-<<<<<<< HEAD
     gateway_success_resp success_resp = 3;
     gateway_error_resp error_resp = 4;
     gateway_sc_is_active_resp_v1 is_active_resp = 5;
