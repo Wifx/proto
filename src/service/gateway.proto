@@ -5,6 +5,7 @@ package helium;
 import "blockchain_state_channel_v1.proto";
 import "blockchain_txn_state_channel_close_v1.proto";
 import "blockchain_txn_poc_receipts_v2.proto";
+import "blockchain_region_param_v1.proto";
 
 enum close_state {
   close_state_closable = 0;
@@ -146,7 +147,7 @@ message gateway_poc_region_params_req_v1 {
 }
 message gateway_poc_region_params_resp_v1 {
   bytes region = 1;                                   // the specified region from the request
-  bytes params = 2;                                   // the params for the specified region
+  blockchain_region_param_v1 params = 2;              // the params for the specified region
 }
 
 // response to the requestor's 'gateway_poc_check_challenge_target_req_v1' request if the requestor is the target
