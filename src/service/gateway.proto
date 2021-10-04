@@ -143,11 +143,13 @@ message gateway_poc_check_challenge_target_req_v1 {
 }
 
 message gateway_poc_region_params_req_v1 {
-  bytes region = 1;                                   // region to return params for
+  bytes address = 1;                                  // address to return region data
+  bytes signature = 2;                                // signed request
 }
 message gateway_poc_region_params_resp_v1 {
-  bytes region = 1;                                   // the specified region from the request
-  blockchain_region_params_v1 params = 2;     // the params for the specified region
+  bytes address = 1;                                  // the specified pubkeybin from the request
+  bytes region = 2;                                   // the specified region from the request
+  blockchain_region_params_v1 params = 3;             // the params for the specified region
 }
 
 // response to the requestor's 'gateway_poc_check_challenge_target_req_v1' request if the requestor is the target
